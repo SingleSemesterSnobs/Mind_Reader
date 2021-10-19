@@ -231,9 +231,9 @@ suite('Parser Test Suite', () => {
     let currTest = t; // without this, all test calls get the last test
     test(currTest.name, () => {
       let result: LexNode = deparent(new Parser(currTest.input.join('\n')).parse());
-			process.stdout.write(Object.entries(result).toString());
+      process.stdout.write(Object.entries(result).toString());
 
-			assert.deepStrictEqual(result, currTest.output);
-		});
-	}
+      assert.deepStrictEqual(result, currTest.output);
+    });
+  }
 });
