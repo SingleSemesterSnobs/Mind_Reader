@@ -1,4 +1,4 @@
-name: "@vscode/test-electron: pylex"
+name: "@vscode/test-electron"
 
 on:
   push:
