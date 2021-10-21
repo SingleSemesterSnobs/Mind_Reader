@@ -98,43 +98,6 @@ export default class Parser {
   }
 
   /**
-   * Returns the next indented block
-   * as a tree of significant tokens
-   *
-   * @param `parent` The parent {@link LexNode} for the current block.
-   */
-  //private _parse(parent?: LexNode): LexNode[] {
-  //  let ret: LexNode[] = [];
-
-  //  while (this.lexer.currToken() !== EOFTOKEN) {
-  //    if (this.lexer.currToken().indentLevel < this.currIndent) {
-  //      // End of indented block
-  //      //
-  //      // Unravel recursion until indentation is equal
-  //      this.currIndent--;
-  //      if (this.currIndent > this.lexer.currToken().indentLevel) {
-  //        this.lexer.retract(); // re-read this token, need to to higher in tree
-  //      }
-  //      return ret;
-  //    }
-
-  //    if (this.lexer.currToken().type === Symbol.INDENT) {
-  //      this.lexer.next();
-  //      continue;
-  //    }
-
-  //    // parse new block
-  //    let blockRoot: LexNode = new LexNode(this.lexer.currToken().type + (this.lexer.currToken().attr === undefined ? "" : " " + this.lexer.currToken().attr),
-  //                                         vscode.TreeItemCollapsibleState.None, this.lexer.currToken(), undefined, parent);
-  //    this.lexer.next();
-  //    this.currIndent++;
-  //    blockRoot.adopt(this._parse(blockRoot)); // recursively parse all descendants
-  //    ret.push(blockRoot);
-  //  }
-  //  return ret;
-  //}
-
-  /**
    * Get an array of LexNodes representing the rootpath of LexNodes from the
    * passed line number to the root of the document. A list of "this" inside
    * "that" inside ... inside the document root.
