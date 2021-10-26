@@ -8,7 +8,7 @@ import * as vscode from 'vscode';
 type Command = {
   name: string,
   callback: () => void
-}
+};
 
 // The list of commands to register in the extension
 const commands: Command[] = [
